@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /home
+spring:
+  profiles:
+    active: db
+logging:
+  level:
+    liquibase: DEBUG

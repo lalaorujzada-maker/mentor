@@ -1,0 +1,42 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 01-create-student-table
+      author: backend-task
+      changes:
+
+        - createTable:
+            tableName: student
+            columns:
+
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: name
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: surname
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: email
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+                    unique: true
+
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false

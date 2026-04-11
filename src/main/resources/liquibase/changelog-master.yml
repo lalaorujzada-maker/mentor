@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: /liquibase/changelog/01-create-student-table.yml
+
+  - include:
+      file: /liquibase/changelog/02-create-firstexam-table.yml
+
+  - include:
+      file: /liquibase/changelog/03-create-secondexam-table.yml
