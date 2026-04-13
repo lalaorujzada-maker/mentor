@@ -30,7 +30,6 @@ public class SecondExamServiceImpl implements SecondExamService {
     private final FirstExamService firstExamService;
     private final PasswordEncoder passwordEncoder;
 
-    // ===================== CREATE (REGISTER) =====================
     @Override
     public SecondExamResponseDto register(SecondExamRequestDto requestDto) {
 
@@ -63,7 +62,6 @@ public class SecondExamServiceImpl implements SecondExamService {
         return secondExamMapper.toResponseDto(saved);
     }
 
-    // ===================== READ BY ID =====================
     @Override
     public SecondExamResponseDto getById(Long id) {
 
@@ -73,7 +71,6 @@ public class SecondExamServiceImpl implements SecondExamService {
         return secondExamMapper.toResponseDto(entity);
     }
 
-    // ===================== READ BY STUDENT ID =====================
     @Override
     public SecondExamResponseDto getByStudentId(Long studentId) {
 
@@ -83,7 +80,6 @@ public class SecondExamServiceImpl implements SecondExamService {
         return secondExamMapper.toResponseDto(entity);
     }
 
-    // ===================== READ ALL =====================
     @Override
     public List<SecondExamResponseDto> getAll() {
 
@@ -93,7 +89,6 @@ public class SecondExamServiceImpl implements SecondExamService {
                 .toList();
     }
 
-    // ===================== UPDATE =====================
     @Override
     public SecondExamResponseDto update(Long id, SecondExamRequestDto requestDto) {
 
@@ -105,7 +100,6 @@ public class SecondExamServiceImpl implements SecondExamService {
         return secondExamMapper.toResponseDto(secondExamRepository.save(entity));
     }
 
-    // ===================== DELETE =====================
     @Override
     public void delete(Long id) {
 
