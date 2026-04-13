@@ -14,7 +14,6 @@ import java.util.List;
 public class SecondExamController {
     private final SecondExamService secondExamService;
 
-    // 🔥 REGISTER (MAIN TASK)
     @PostMapping("/register")
     public SecondExamResponseDto register(@RequestBody SecondExamRequestDto requestDto) {
         return secondExamService.register(requestDto);
